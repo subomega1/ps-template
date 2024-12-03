@@ -1,46 +1,74 @@
 #include <bits/stdc++.h>
 using namespace std;
- using ll = long long;
+
+// Typedefs
+using ll = long long;
+using vi = vector<int>;
+using vl = vector<ll>;
+using pi = pair<int, int>;
+using pl = pair<ll, ll>;
+
+// Constants
+const int INF = 1e9 + 7;
+const ll MOD = 1e9 + 7;
+
+// Macros
 #define endl "\n"
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+#define sz(x) (int)(x).size()
+#define pb push_back
+#define fi first
+#define se second
+
+// Debugging
+#ifndef ONLINE_JUDGE
+#define dbg(...) cerr << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#else
+#define dbg(...)
+#endif
 
 void dbg_out() { cerr << endl; }
-template<typename Head, typename... Tail>
+template <typename Head, typename... Tail>
 void dbg_out(Head H, Tail... T) { cerr << ' ' << H; dbg_out(T...); }
-#define dbg(...) cerr << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
 
-// Function to redirect input and output to/from files
-void localFile(string filename) {
-    // Redirecting standard input to filename.in
+// File Redirection
+void localFile(const string& filename) {
     if (!freopen((filename + ".in").c_str(), "r", stdin)) {
         cerr << "Error opening input file!" << endl;
-        exit(1);  // Exit if file can't be opened
+        exit(1);
     }
-    // Redirecting standard output to filename.out
     if (!freopen((filename + ".out").c_str(), "w", stdout)) {
         cerr << "Error opening output file!" << endl;
-        exit(1);  // Exit if file can't be opened
+        exit(1);
     }
 }
 
+// Utility Functions
+template <typename T>
+void print(const vector<T>& v) {
+    for (const auto& x : v) cout << x << " ";
+    cout << endl;
+}
+
+// Solver Function
 void solve() {
     int t;
-    cin >> t;  // Number of test cases
-
-        while (t--) {
-        
-        
-        }
-       
-
-
-  
-        
-        
+    cin >> t; // Number of test cases
+    while (t--) {
+        // Your solution logic goes here
+        // dbg(t); // Example debugging
     }
+}
 
+// Main Function
 int main() {
-    // Uncomment and replace "filename" with your actual file name if needed
-    //localFile("filename");
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    #ifndef ONLINE_JUDGE
+    localFile("filename"); // Replace "filename" with actual file name
+    #endif
 
     solve();
 
